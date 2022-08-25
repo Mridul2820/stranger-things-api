@@ -13,8 +13,8 @@ datasource db {
 }
 
 model st_character {
-  id              Int     @id @default(autoincrement())
-  name            String  @db.VarChar(255)
-  featured_dialog String?
-  image           String? @db.VarChar(255)
+  id             Int     @id @default(autoincrement())
+  character_name String  @db.VarChar(255)
+  portrayed_by   String? @db.VarChar(255)
+  image          String? @db.VarChar(255)
 }
