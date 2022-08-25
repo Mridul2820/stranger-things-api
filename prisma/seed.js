@@ -12,7 +12,7 @@ const getCharacterInfo = async (characterName) => {
   const $ = cheerio.load(data);
   let character_name = $('h2[data-source="name"].pi-item').text();
   const portrayed_by = $(
-    'div[data-source="portrayer"] > div.pi-data-value pi-font > a'
+    'div[data-source="portrayer"] > div.pi-data-value.pi-font > a'
   ).text();
   const image = $(".image.image-thumbnail > img").attr("src");
   if (!character_name) {
@@ -41,7 +41,7 @@ const loadCharacters = async () => {
     );
     // save them to the db
     console.log("Let's seed it");
-    await prisma.tog_character.createMany({ data: characters });
+    await prisma.st_character.createMany({ data: characters });
   } catch (error) {
     console.error(error);
   }
