@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { API_HOST, API_URL } from "../constants";
 
 export default function Home({ characters }) {
   return (
@@ -73,16 +74,13 @@ export default function Home({ characters }) {
 }
 
 export async function getStaticProps() {
-  const data = await fetch(
-    "https://stranger-things-character-api.p.rapidapi.com/characters",
-    {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-        "X-RapidAPI-Host": "stranger-things-character-api.p.rapidapi.com",
-      },
-    }
-  );
+  const data = await fetch(`${API_URL}/characters`, {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
+      "X-RapidAPI-Host": API_HOST,
+    },
+  });
 
   const characters = await data.json();
 
