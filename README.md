@@ -1,2 +1,1 @@
-# Stranger Things character API
-
+# Stranger Things API
