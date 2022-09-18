@@ -6,7 +6,7 @@ const Character = ({ character }) => {
   console.log(character);
 
   return (
-    <div className="bg-slate-900 text-white min-h-screen py-8 px-4">
+    <div className="min-h-[calc(100vh-66px)] py-8 px-4">
       <Head>
         <title>{character.character_name} - Stranger Things API</title>
         <meta
@@ -34,21 +34,33 @@ const Character = ({ character }) => {
         <meta name="twitter:image" content={character.image} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <div className="flex justify-center flex-col items-center">
-        <img
-          src={character.image}
-          alt={character.character_name}
-          className="w-32 h-32 rounded-full"
-          loading="lazy"
-        />
-        <h1 className="text-3xl font-bold pt-5 pb-2">
-          {character.character_name}
-        </h1>
-        {character.portrayed_by && (
-          <p className="text-gray-400">By: {character.portrayed_by}</p>
-        )}
-      </div>
+      <main>
+        <p className="text-center font-bold text-3xl">Stranger Things API</p>
+        <div className="flex justify-center my-5">
+          <a
+            href="https://rapidapi.com/Mridul2820/api/stranger-things-character-api"
+            className="px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
+            target="_blank"
+            rel="noreferrer"
+          >
+            API Docs
+          </a>
+        </div>
+        <div className="flex justify-center flex-col items-center">
+          <img
+            src={character.image}
+            alt={character.character_name}
+            className="w-32 h-32 rounded-full"
+            loading="lazy"
+          />
+          <h1 className="text-3xl font-bold pt-5 pb-2">
+            {character.character_name}
+          </h1>
+          {character.portrayed_by && (
+            <p className="text-gray-400">By: {character.portrayed_by}</p>
+          )}
+        </div>
+      </main>
     </div>
   );
 };

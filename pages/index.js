@@ -4,7 +4,7 @@ import { API_HOST, API_URL } from "../constants";
 
 export default function Home({ characters }) {
   return (
-    <div className="bg-slate-900 text-white">
+    <div>
       <Head>
         <title>Stranger Things API</title>
         <meta name="description" content="Stranger Things API" />
@@ -13,8 +13,18 @@ export default function Home({ characters }) {
 
       <main className="p-5">
         <h1 className="text-center font-bold text-3xl">Stranger Things API</h1>
+        <div className="flex justify-center my-5">
+          <a
+            href="https://rapidapi.com/Mridul2820/api/stranger-things-character-api"
+            className="px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
+            target="_blank"
+            rel="noreferrer"
+          >
+            API Docs
+          </a>
+        </div>
 
-        <div className="flex flex-wrap justify-center mt-5">
+        <div className="flex flex-wrap justify-center">
           {characters?.map((character) => (
             <div
               key={character.id}
@@ -56,19 +66,6 @@ export default function Home({ characters }) {
           ))}
         </div>
       </main>
-
-      <footer className="p-5 flex justify-center">
-        <p className="text-sm border-t-2 border-t-slate-600 inline-block pt-1 text-center">
-          Made with ❤️ by{" "}
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            href="https://www.mridul.tech/"
-            target="_blank"
-          >
-            Mridul
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }
