@@ -1,7 +1,7 @@
+import React from "react";
 import Head from "next/head";
 
 export default function Home({ characters }) {
-  console.log(characters);
   return (
     <div className="bg-slate-900 text-white">
       <Head>
@@ -74,9 +74,23 @@ export default function Home({ characters }) {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://stranger-things-api.mridul.tech/api/characters"
+    "https://stranger-things-character-api.p.rapidapi.com/characters",
+    {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": process.env.RAPID_API_KEY,
+        "X-RapidAPI-Host": "stranger-things-character-api.p.rapidapi.com",
+      },
+    }
   );
+
   const characters = await data.json();
+
+  if (!characters) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
