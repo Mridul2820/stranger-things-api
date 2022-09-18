@@ -10,13 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1
-          style={{
-            textAlign: "center",
-          }}
-        >
-          Stranger Things character API
-        </h1>
+        <h1 className="text-center">Stranger Things character API</h1>
       </main>
     </div>
   );
