@@ -10,6 +10,12 @@
 | [Home](http://stranger-things-api.mridul.tech/) | [Docs](https://rapidapi.com/Mridul2820/api/stranger-things-character-api) |
 | ---- | ---- |
 
+| [Pull Requests](https://github.com/Mridul2820/stranger-things-api/pulls) | [Issues](https://github.com/Mridul2820/stranger-things-api/issues) |
+| ---- | ---- |
+
+| [Contribution Guide](CONTRIBUTING.md) | [Code of Conduct](CODE_OF_CONDUCT.md) | [Lisense](LICENSE) |
+| ---- | ---- | ---- |
+
 ## Base API URL
 ```
 API_URL - https://stranger-things-character-api.p.rapidapi.com
