@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import { API_HOST, API_URL } from "../constants";
+import React from 'react';
+import Head from 'next/head';
+import { API_HOST, API_URL } from '../constants';
 
 export default function Home({ characters }) {
   return (
@@ -72,10 +72,10 @@ export default function Home({ characters }) {
 
 export async function getStaticProps() {
   const data = await fetch(`${API_URL}/characters`, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-      "X-RapidAPI-Host": API_HOST,
+      'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+      'X-RapidAPI-Host': API_HOST,
     },
   });
 

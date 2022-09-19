@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import { API_HOST, API_URL } from "../constants";
+import React from 'react';
+import Head from 'next/head';
+import { API_HOST, API_URL } from '../constants';
 
 const Character = ({ character }) => {
   console.log(character);
@@ -71,10 +71,10 @@ export async function getStaticProps({ params }) {
   const data = await fetch(
     `https://stranger-things-character-api.p.rapidapi.com/characters/${params.id}`,
     {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-        "X-RapidAPI-Host": "stranger-things-character-api.p.rapidapi.com",
+        'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+        'X-RapidAPI-Host': 'stranger-things-character-api.p.rapidapi.com',
       },
     }
   );
@@ -96,10 +96,10 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const data = await fetch(`${API_URL}/characters`, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-      "X-RapidAPI-Host": API_HOST,
+      'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+      'X-RapidAPI-Host': API_HOST,
     },
   });
 
@@ -111,6 +111,6 @@ export async function getStaticPaths() {
 
   return {
     paths: pathsArr,
-    fallback: "blocking",
+    fallback: 'blocking',
   };
 }
