@@ -8,7 +8,7 @@ const Footer = () => {
         <a
           className="text-blue-500 hover:text-blue-700"
           href="https://www.mridul.tech/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           Mridul
         </a>
