@@ -1,53 +1,91 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { API_HOST, API_URL } from '../constants';
+import { API_HOST, API_URL, BASE_URL } from '../constants';
 
 const Character = ({ character }) => {
-  console.log(character);
-
   return (
     <div className="min-h-[calc(100vh-66px)] py-8 px-4">
       <Head>
-        <title>{character.character_name} - Stranger Things API</title>
+        <title>
+          {character.character_name
+            ? character.character_name
+            : 'Character Detail'}{' '}
+          - Stranger Things API
+        </title>
         <meta
           name="description"
-          content={`${character.character_name} - Stranger Things API`}
+          content={`${
+            character.character_name
+              ? character.character_name
+              : 'Character Detail'
+          } - Stranger Things API`}
         />
         <link rel="icon" href="/favicon.ico" />
 
-        <meta property="og:title" content={`${character.character_name}`} />
+        <meta property="canonical" content={`${BASE_URL}/${character.id}`} />
+
+        <meta
+          property="og:title"
+          content={`${
+            character.character_name
+              ? character.character_name
+              : 'Character Detail'
+          }`}
+        />
         <meta
           property="og:description"
-          content={`${character.character_name} - Stranger Things API`}
+          content={`${
+            character.character_name
+              ? character.character_name
+              : 'Character Detail'
+          } - Stranger Things API`}
         />
-        <meta property="og:image" content={character.image} />
         <meta
-          property="og:url"
-          content={`https://stranger-things-api.vercel.app/${character.id}`}
+          property="og:image"
+          content={
+            character.image ? character.image : '/assets/st_api_logo.jpg'
+          }
         />
+        <meta property="og:url" content={`${BASE_URL}/${character.id}`} />
 
-        <meta name="twitter:title" content={`${character.character_name}`} />
+        <meta
+          name="twitter:title"
+          content={`${
+            character.character_name
+              ? character.character_name
+              : 'Character Detail'
+          }`}
+        />
         <meta
           name="twitter:description"
           content={`${character.character_name} - Stranger Things API`}
         />
-        <meta name="twitter:image" content={character.image} />
+        <meta
+          name="twitter:image"
+          content={
+            character.image ? character.image : '/assets/st_api_logo.jpg'
+          }
+        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main>
         <div className="flex justify-center flex-col items-center">
-          <Image
-            height={250}
-            width={250}
-            src={character.image}
-            alt={character.character_name}
-            className="w-32 h-32 rounded-full align-top"
-            objectFit="cover"
-          />
-          <h1 className="text-3xl font-bold pt-5 pb-2">
-            {character.character_name}
-          </h1>
+          {character.image && (
+            <Image
+              height={250}
+              width={250}
+              src={character.image}
+              alt={character.character_name}
+              className="w-32 h-32 rounded-full align-top"
+              objectFit="cover"
+            />
+          )}
+          {character.character_name && (
+            <h1 className="text-3xl font-bold pt-5 pb-2">
+              {character.character_name}
+            </h1>
+          )}
           {character.portrayed_by && (
             <p className="text-gray-400">By: {character.portrayed_by}</p>
           )}
