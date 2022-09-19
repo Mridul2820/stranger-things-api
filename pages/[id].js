@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { API_HOST, API_URL } from '../constants';
 
 const Character = ({ character }) => {
@@ -36,11 +37,13 @@ const Character = ({ character }) => {
       </Head>
       <main>
         <div className="flex justify-center flex-col items-center">
-          <img
+          <Image
+            height={250}
+            width={250}
             src={character.image}
             alt={character.character_name}
-            className="w-32 h-32 rounded-full"
-            loading="lazy"
+            className="w-32 h-32 rounded-full align-top"
+            objectFit="cover"
           />
           <h1 className="text-3xl font-bold pt-5 pb-2">
             {character.character_name}

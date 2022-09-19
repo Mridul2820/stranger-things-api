@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { API_HOST, API_URL } from '../constants';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home({ characters }) {
   return (
@@ -24,11 +25,13 @@ export default function Home({ characters }) {
               className="flex flex-col items-center justify-center p-5 m-3 border border-slate-600 rounded-sm max-w-[250px] w-full shadow-md"
             >
               {character.image ? (
-                <img
+                <Image
+                  height={250}
+                  width={250}
                   src={character.image}
                   alt={character.character_name}
-                  className="w-32 h-32 rounded-full"
-                  loading="lazy"
+                  className="w-32 h-32 rounded-full align-top"
+                  objectFit="cover"
                 />
               ) : (
                 <img
