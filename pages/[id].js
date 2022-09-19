@@ -5,7 +5,7 @@ import { API_HOST, API_URL, BASE_URL } from '../constants';
 
 const Character = ({ character }) => {
   return (
-    <div className="min-h-[calc(100vh-66px)] py-8 px-4">
+    <div className="min-h-[calc(100vh-130px)] py-8 px-4">
       <Head>
         <title>
           {character.character_name
