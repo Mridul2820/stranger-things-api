@@ -31,7 +31,7 @@ export default function Home({ characters }) {
           {characters?.map((character) => (
             <div
               key={character.id}
-              className="flex flex-col items-center justify-center p-5 m-3 border border-slate-600 rounded-sm max-w-[250px] w-full shadow-md"
+              className="flex flex-col items-center justify-center p-5 m-3 border border-slate-600 rounded-sm max-w-[250px] w-full hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {character.image ? (
                 <Image
