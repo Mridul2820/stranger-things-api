@@ -1,7 +1,20 @@
 # Stranger Things API
 
+<img 
+  src="/public/assets/st_api_logo.jpg"
+  alt="Stranger Things API"
+  width="150"
+  height="150"
+/>
+
 | [Home](http://stranger-things-api.mridul.tech/) | [Docs](https://rapidapi.com/Mridul2820/api/stranger-things-character-api) |
 | ---- | ---- |
+
+| [Pull Requests](https://github.com/Mridul2820/stranger-things-api/pulls) | [Issues](https://github.com/Mridul2820/stranger-things-api/issues) |
+| ---- | ---- |
+
+| [Contribution Guide](CONTRIBUTING.md) | [Code of Conduct](CODE_OF_CONDUCT.md) | [Lisense](LICENSE) |
+| ---- | ---- | ---- |
 
 ## Base API URL
 ```
