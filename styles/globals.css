@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn {
+    @apply px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600;
+  }
+}
+
 html,
 body {
   padding: 0;

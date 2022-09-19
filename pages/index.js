@@ -12,17 +12,9 @@ export default function Home({ characters }) {
       </Head>
 
       <main className="p-5">
-        <h1 className="text-center font-bold text-3xl">Stranger Things API</h1>
-        <div className="flex justify-center my-5">
-          <a
-            href="https://rapidapi.com/Mridul2820/api/stranger-things-character-api"
-            className="px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Docs
-          </a>
-        </div>
+        <h1 className="text-center font-bold text-3xl mb-5">
+          Stranger Things API
+        </h1>
 
         <div className="flex flex-wrap justify-center">
           {characters?.map((character) => (
@@ -55,10 +47,7 @@ export default function Home({ characters }) {
               )}
 
               <div className="flex mt-2">
-                <a
-                  href={`/${character.id}`}
-                  className="px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
-                >
+                <a href={`/${character.id}`} className="btn">
                   More
                 </a>
               </div>
