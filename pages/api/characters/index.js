@@ -1,7 +1,7 @@
-import { prisma } from "../../../utils/prisma";
+import { prisma } from '../../../utils/prisma';
 
 const handler = async (req, res) => {
-  if (req.method !== "GET") {
+  if (req.method !== 'GET') {
     res.status(405);
   }
 
@@ -18,7 +18,7 @@ const handler = async (req, res) => {
       if (isNaN(take)) {
         return res
           .status(400)
-          .json({ err: "Please enter a valid number for the limit parameter" });
+          .json({ err: 'Please enter a valid number for the limit parameter' });
       }
       queryConfig.take = take;
     }
@@ -28,7 +28,7 @@ const handler = async (req, res) => {
       if (isNaN(skip)) {
         return res
           .status(400)
-          .json({ err: "Please enter a valid number for the skip parameter" });
+          .json({ err: 'Please enter a valid number for the skip parameter' });
       }
       queryConfig.skip = skip;
     }
@@ -37,7 +37,7 @@ const handler = async (req, res) => {
     return res.status(200).json(characters);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ err: "Aghhhhh" });
+    res.status(500).json({ err: 'Aghhhhh' });
   }
 };
 
