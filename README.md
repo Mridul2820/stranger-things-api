@@ -1,5 +1,12 @@
 # Stranger Things API
 
+<img 
+  src="/public/assets/st_api_logo.jpg"
+  alt="Stranger Things API"
+  width="150"
+  height="150"
+/>
+
 | [Home](http://stranger-things-api.mridul.tech/) | [Docs](https://rapidapi.com/Mridul2820/api/stranger-things-character-api) |
 | ---- | ---- |
 
