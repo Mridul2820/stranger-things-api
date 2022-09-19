@@ -35,17 +35,6 @@ const Character = ({ character }) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <main>
-        <p className="text-center font-bold text-3xl">Stranger Things API</p>
-        <div className="flex justify-center my-5">
-          <a
-            href="https://rapidapi.com/Mridul2820/api/stranger-things-character-api"
-            className="px-2 py-1 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Docs
-          </a>
-        </div>
         <div className="flex justify-center flex-col items-center">
           <img
             src={character.image}

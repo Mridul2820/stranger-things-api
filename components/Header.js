@@ -1,21 +1,27 @@
+import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center px-5 py-3">
-      <a href="/" title="Home">
-        <img
-          src="/assets/st_api_logo.jpg"
-          alt="logo"
-          className="h-10 w-10 rounded-sm"
-        />
-      </a>
+      <Link href="/">
+        <a title="Home">
+          <img
+            src="/assets/st_api_logo.jpg"
+            alt="logo"
+            className="h-10 w-10 rounded-sm"
+          />
+        </a>
+      </Link>
 
       <div className="flex items-center space-x-3">
-        <a href="/" className="btn" title="Home">
-          Home
-        </a>
+        <Link href="/">
+          <a className="btn" title="Home">
+            Home
+          </a>
+        </Link>
+
         <a
           href="https://rapidapi.com/Mridul2820/api/stranger-things-character-api"
           className="btn"

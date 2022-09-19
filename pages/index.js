@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { API_HOST, API_URL } from '../constants';
+import Link from 'next/link';
 
 export default function Home({ characters }) {
   return (
@@ -47,9 +48,9 @@ export default function Home({ characters }) {
               )}
 
               <div className="flex mt-2">
-                <a href={`/${character.id}`} className="btn">
-                  More
-                </a>
+                <Link href={`/${character.id}`}>
+                  <a className="btn">More</a>
+                </Link>
               </div>
             </div>
           ))}
