@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { API_HOST, API_URL, BASE_URL } from '../constants';
 
 export default function Home({ characters }) {
+  const [search, setSearch] = useState('');
+
+  const filteredCharacters = characters.filter((character) => {
+    return (
+      character.character_name.toLowerCase().includes(search.toLowerCase()) ||
+      character.portrayed_by.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+
   return (
     <div>
       <Head>
@@ -27,8 +36,18 @@ export default function Home({ characters }) {
           Stranger Things API
         </h1>
 
+        <div className="flex justify-center">
+          <input
+            type="text"
+            className="w-full border-2 border-gray-300 p-2 rounded-md outline-none focus:border-blue-400 mb-5 bg-transparent max-w-sm mx-auto "
+            placeholder="Search for a character"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+
         <div className="flex flex-wrap justify-center">
-          {characters?.map((character) => (
+          {filteredCharacters?.map((character) => (
             <div
               key={character.id}
               className="flex flex-col items-center justify-center p-5 m-3 border border-slate-600 rounded-sm max-w-[250px] w-full hover:shadow-lg hover:scale-105 transition-all duration-300"
