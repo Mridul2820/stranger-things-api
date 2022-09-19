@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { API_HOST, API_URL, BASE_URL } from '../constants';
 
-export default function Home({ characters }) {
+const Home = ({ characters }) => {
   const [search, setSearch] = useState('');
 
   const filteredCharacters = characters.filter((character) => {
@@ -89,7 +89,9 @@ export default function Home({ characters }) {
       </main>
     </div>
   );
-}
+};
+
+export default Home;
 
 export async function getStaticProps() {
   const data = await fetch(`${API_URL}/characters`, {
