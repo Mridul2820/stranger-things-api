@@ -77,7 +77,7 @@ const Character = ({ character }) => {
               width={250}
               src={character.image}
               alt={character.character_name}
-              className="w-32 h-32 rounded-full align-top"
+              className="w-32 rounded-md align-top"
               objectFit="cover"
             />
           )}

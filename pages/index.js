@@ -15,7 +15,7 @@ const Home = ({ characters }) => {
   });
 
   return (
-    <div>
+    <div className="min-h-[calc(100vh-130px)]">
       <Head>
         <title>Stranger Things API</title>
         <meta name="description" content="Stranger Things API" />
