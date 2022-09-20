@@ -1,4 +1,4 @@
-const SITE_URL = 'http://stranger-things-api.mridul.tech';
+const SITE_URL = 'https://stranger-things-api.mridul.tech';
 
 module.exports = {
   siteUrl: SITE_URL,
