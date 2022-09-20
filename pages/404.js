@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const NotFound = () => {
   return (
@@ -12,9 +13,9 @@ const NotFound = () => {
         Something More Stranger
       </h2>
       <p className="text-center">Sorry, Page Not Found</p>
-      <a href="/" className="btn">
-        Go to Home
-      </a>
+      <Link href="/">
+        <a className="btn">Go to Home</a>
+      </Link>
       <img
         src="/assets/st_api_logo.jpg"
         alt="404"
