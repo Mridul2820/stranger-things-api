@@ -18,15 +18,24 @@ const Home = ({ characters }) => {
     <div className="min-h-[calc(100vh-130px)]">
       <Head>
         <title>Stranger Things API</title>
-        <meta name="description" content="Stranger Things API" />
+        <meta
+          name="description"
+          content="Stranger Things API with character name, potrayed By and image of the character"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta property="canonical" content={BASE_URL} />
         <meta property="og:title" content="Stranger Things API" />
-        <meta property="og:description" content="Stranger Things API" />
+        <meta
+          property="og:description"
+          content="Stranger Things API with character name, potrayed By and image of the character"
+        />
         <meta property="og:image" content="/assets/st_api_logo.jpg" />
         <meta property="og:url" content={BASE_URL} />
         <meta name="twitter:title" content="Stranger Things API" />
-        <meta name="twitter:description" content="Stranger Things API" />
+        <meta
+          name="twitter:description"
+          content="Stranger Things API with character name, potrayed By and image of the character"
+        />
         <meta name="twitter:image" content="/assets/st_api_logo.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
