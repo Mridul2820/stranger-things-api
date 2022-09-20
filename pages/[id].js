@@ -10,7 +10,7 @@ const Character = ({ character }) => {
         <title>
           {character.character_name
             ? character.character_name
-            : 'Character Detail'}{' '}
+            : 'Character Detail '}
           - Stranger Things API
         </title>
         <meta
@@ -31,7 +31,7 @@ const Character = ({ character }) => {
             character.character_name
               ? character.character_name
               : 'Character Detail'
-          }`}
+          } - Stranger Things API`}
         />
         <meta
           property="og:description"
@@ -77,7 +77,7 @@ const Character = ({ character }) => {
               width={250}
               src={character.image}
               alt={character.character_name}
-              className="w-32 h-32 rounded-full align-top"
+              className="w-32 rounded-md"
               objectFit="cover"
             />
           )}
