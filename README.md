@@ -21,7 +21,7 @@
 API_URL - https://stranger-things-character-api.p.rapidapi.com
 ```
 ## API KEY
-Get an [API Key](https://rapidapi.com/Mridul2820/api/stranger-things-character-api) from rapid API
+Get an [API Key](https://rapidapi.com/Mridul2820/api/stranger-things-character-api) from [Rapid API](https://rapidapi.com/Mridul2820/api/stranger-things-character-api)
 
 
 ## Get All Characters Example
