@@ -7,7 +7,7 @@ const Footer = () => {
         Made with ❤️ by{' '}
         <a
           className="text-blue-500 hover:text-blue-700"
-          href="https://www.mridul.tech/"
+          href="https://www.mridul.tech"
           target="_blank"
           rel="noreferrer"
         >
