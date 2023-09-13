@@ -17,7 +17,7 @@ const Home = ({ characters }) => {
   return (
     <div className="min-h-[calc(100vh-130px)]">
       <Head>
-        <title>Stranger Things API</title>
+        <title>Stranger Things API | Character Details | Images and More</title>
         <meta
           name="description"
           content="Stranger Things API with character name, potrayed By and image of the character"
@@ -86,10 +86,9 @@ const Home = ({ characters }) => {
                   By: {character.portrayed_by}
                 </p>
               )}
-
               <div className="flex mt-2">
-                <Link href={`/${character.id}`}>
-                  <a className="btn">More</a>
+                <Link href={`/${character.id}`} className="btn">
+                  More
                 </Link>
               </div>
             </div>

@@ -8,23 +8,14 @@ const Character = ({ character }) => {
     <div className="min-h-[calc(100vh-130px)] py-8 px-4">
       <Head>
         <title>
-          {character.character_name
-            ? character.character_name
-            : 'Character Detail '}
-          - Stranger Things API
+          {character.character_name} Character Details - Stranger Things API
         </title>
         <meta
           name="description"
-          content={`${
-            character.character_name
-              ? character.character_name
-              : 'Character Detail'
-          } - Stranger Things API`}
+          content={`${character.character_name} Portrayed by ${character.portrayed_by} | Character Details | Images | Stranger Things API`}
         />
         <link rel="icon" href="/favicon.ico" />
-
         <meta property="canonical" content={`${BASE_URL}/${character.id}`} />
-
         <meta
           property="og:title"
           content={`${
