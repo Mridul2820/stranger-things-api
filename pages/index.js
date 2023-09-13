@@ -17,7 +17,7 @@ const Home = ({ characters }) => {
   return (
     <div className="min-h-[calc(100vh-130px)]">
       <Head>
-        <title>Stranger Things API</title>
+        <title>Stranger Things API | Character Details | Images and More</title>
         <meta
           name="description"
           content="Stranger Things API with character name, potrayed By and image of the character"
