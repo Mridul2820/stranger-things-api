@@ -13,8 +13,8 @@ const NotFound = () => {
         Something More Stranger
       </h2>
       <p className="text-center">Sorry, Internal Server Error</p>
-      <Link href="/">
-        <a className="btn">Go to Home</a>
+      <Link href="/" className="btn">
+        Go to Home
       </Link>
       <img
         src="/assets/st_api_logo.jpg"

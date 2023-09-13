@@ -86,10 +86,9 @@ const Home = ({ characters }) => {
                   By: {character.portrayed_by}
                 </p>
               )}
-
               <div className="flex mt-2">
-                <Link href={`/${character.id}`}>
-                  <a className="btn">More</a>
+                <Link href={`/${character.id}`} className="btn">
+                  More
                 </Link>
               </div>
             </div>

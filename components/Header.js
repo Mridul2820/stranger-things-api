@@ -5,21 +5,17 @@ import { AiFillGithub } from 'react-icons/ai';
 const Header = () => {
   return (
     <div className="flex justify-between items-center px-5 py-3">
-      <Link href="/">
-        <a title="Home">
-          <img
-            src="/assets/st_api_logo.jpg"
-            alt="logo"
-            className="h-10 w-10 rounded-sm"
-          />
-        </a>
+      <Link href="/" title="Home">
+        <img
+          src="/assets/st_api_logo.jpg"
+          alt="logo"
+          className="h-10 w-10 rounded-sm"
+        />
       </Link>
 
       <div className="flex items-center space-x-3">
-        <Link href="/">
-          <a className="btn" title="Home">
-            Home
-          </a>
+        <Link href="/" className="btn" title="Home">
+          Home
         </Link>
 
         <a
