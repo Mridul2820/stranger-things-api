@@ -12,10 +12,10 @@ const Character = ({ character }) => {
         </title>
         <meta
           name="description"
-          content={`${character.character_name} Portrayed by ${character.portrayed_by} | Character Details | Images | Stranger Things API`}
+          content={`${character.character_name} Portrayed by ${character.portrayed_by} | Character Details in Stranger Things | Character Images | Stranger Things API`}
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="canonical" content={`${BASE_URL}/${character.id}`} />
+        <link rel="canonical" href={`${BASE_URL}${character.id}`} />
         <meta
           property="og:title"
           content={`${

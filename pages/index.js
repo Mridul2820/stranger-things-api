@@ -20,7 +20,7 @@ const Home = ({ characters }) => {
         <title>Stranger Things API | Character Details | Images and More</title>
         <meta
           name="description"
-          content="Stranger Things API with character name, potrayed By and image of the character"
+          content="Stranger Things API | Character names with potrayed by Actor Details | Images of the character from the series and more"
         />
         <link rel="icon" href="/favicon.ico" />
         <meta property="canonical" content={BASE_URL} />
